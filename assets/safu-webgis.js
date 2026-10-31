@@ -29,7 +29,7 @@ async function load(){
   $("kPct").textContent=pct(s.accounting.frozen/s.accounting.moved);
   $("edgeCount").textContent=g.edges.length+" giao dịch mẫu có nguồn";
   $("chainCount").textContent=s.chains.length+" mạng được tổng hợp";
-  $("sourceDisclaimer").textContent="Bản ghi gốc: "+dt(s.asOf)+". Cạnh giao dịch trích từ nguồn công khai; chưa tự tái kiểm định RPC. Không có dữ liệu giao dịch realtime.";
+  $("sourceDisclaimer").textContent="Bản ghi gốc: "+dt(s.asOf)+". Cạnh giao dịch trích từ nguồn công khai; chưa tự tái kiểm định RPC. Không có dữ liệu giao dịch realtime.";$("loading").textContent=g.edges.length+" cung giao dịch có dẫn nguồn · "+s.chains.length+" blockchain · KHÔNG phải luồng live.";
   buildFilters();buildSidebar();setStep(state.step);setSelected(null);draw();
  }catch(err){$("stamp").textContent="LỖI TẢI DỮ LIỆU";$("loading").textContent="Không thể nạp lớp giao dịch: "+err.message;$("loading").classList.add("fail");}
 }
@@ -50,7 +50,8 @@ function applyFilter(ch){
  state.filter=ch;
  document.querySelectorAll(".chain-item").forEach(b=>b.setAttribute("aria-pressed",String(ch===b.dataset.chain)));
  $("filterInfo").textContent=(ch==="all"?"Toàn bộ 10 mạng":ch)+" · "+visibleEdges().length+" cạnh đã qua bộ lọc và thời gian";
- draw();
+ if(state.selected && ch!=="all" && state.selected.chain!==ch)setSelected(null);
+ updateChainMetrics(state.selected?.chain||(ch==="all"?null:ch));draw();
 }
 function searched(edge){
  const q=state.query.trim().toLowerCase();if(!q)return true;
@@ -72,7 +73,7 @@ function setSelected(edge){
  if(!edge){
   addText(d,"strong","Chọn một cạnh hoặc nút ví");
   addText(d,"p","Nhấn vào đường cong, hạt chuyển động hoặc nút ví để xem địa chỉ nguồn, địa chỉ nhận, token, thời điểm UTC, loại giao dịch và explorer.", "hint");
-  if(state.snapshot){addText(d,"p","Tổng ledger: "+money(state.snapshot.accounting.moved)+" · bảo đảm "+pct(state.snapshot.accounting.frozen/state.snapshot.accounting.moved),"mini")}
+  if(state.snapshot){addText(d,"p","Tổng ledger: "+money(state.snapshot.accounting.moved)+" · bảo đảm "+pct(state.snapshot.accounting.frozen/state.snapshot.accounting.moved),"mini");updateChainMetrics(state.filter==="all"?null:state.filter)}
   return;
  }
  const from=state.nodes.get(edge.from),to=state.nodes.get(edge.to);
@@ -89,8 +90,17 @@ function setSelected(edge){
  if(validUrl(from.source_url))d.append(link(from.source_url,"Mở ví/nguồn gửi ↗"));
  if(validUrl(to.source_url))d.append(link(to.source_url,"Mở ví nhận ↗"));
  $("detailChain").textContent=edge.chain+" · "+edge.asset;
- if(state.snapshot){const c=state.snapshot.chains.find(x=>x.name===edge.chain);if(c){$("chainGross").textContent=money(c.gross);$("chainSecured").textContent=money(c.frozen);$("chainOpen").textContent=money(c.unresolved);$("chainPct").textContent=pct(c.frozen/c.gross);$("chainProgress").style.width=100*c.frozen/c.gross+"%";$("chainSource").href=c.source;$("chainSource").hidden=false}}
- draw();
+ updateChainMetrics(edge.chain);draw();
+}
+function updateChainMetrics(chainName){
+ if(!state.snapshot)return;
+ const c=chainName?state.snapshot.chains.find(x=>x.name===chainName):null;
+ const a=state.snapshot.accounting;
+ const moved=c?c.gross:a.moved,fr=c?c.frozen:a.frozen,op=c?c.unresolved:a.unresolved;
+ $("detailChain").textContent=c?c.name:"Tổng thể 10 blockchain";
+ $("chainGross").textContent=money(moved);$("chainSecured").textContent=money(fr);$("chainOpen").textContent=money(op);
+ $("chainPct").textContent=pct(fr/moved);$("chainProgress").style.width=(100*fr/moved)+"%";
+ $("chainSource").href=c?c.source:state.snapshot.source;$("chainSource").hidden=false;
 }
 function layout(){
  const bounds=canvas.getBoundingClientRect(),w=Math.max(bounds.width,1),h=Math.max(bounds.height,1);
