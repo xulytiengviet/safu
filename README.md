@@ -12,6 +12,18 @@ Dashboard độc lập theo dõi sự cố các dòng tài sản xuất phát t�
 
 > URL GitHub Pages là đường dẫn dự kiến, chưa xác nhận Pages đã được bật hoặc triển khai thành công.
 
+## Tích hợp WebGIS và đồ thị on-chain
+
+Trang mới: **[webgis.html](./webgis.html)** — URL sau khi bật GitHub Pages: **https://xulytiengviet.github.io/safu/webgis.html**.
+
+- **On-chain network graph**: 10 blockchain từ snapshot hiện hành, liên kết tổng hợp đến `frozen/escrow` và `unresolved`; chọn chain để xem KPI và explorer. Đây là sơ đồ kế toán, **không phải tọa độ hoặc đường đi vật lý của tiền**.
+- **WebGIS thế giới**: MapLibre GL JS và một lớp GeoJSON có khả năng mở rộng, với marker và popup nguồn khi có vị trí địa lý được kiểm chứng. Hiện `data/geo-evidence.geojson` **cố ý không có đối tượng**, do chưa có chứng cứ vị trí thực của ví hay kẻ tấn công; ứng dụng không tạo điểm vị trí giả.
+- **Timeline UTC**: Bộ lọc sự kiện theo ngày; KPI vẫn là snapshot **30/10/2026** chứ không phải dữ liệu lịch sử tại ngày phát lại.
+- **Dữ liệu và quy tắc GIS**: [data/GEO_EVIDENCE.md](./data/GEO_EVIDENCE.md). Bắt buộc nguồn HTTPS, UTC, độ tin cậy, WGS84 lon/lat.
+- **Bản đồ nền**: sử dụng demo tiles của MapLibre cho mục đích thử nghiệm; khi triển khai công khai lớn cần cấu hình nhà cung cấp tiles riêng theo quy định bản quyền và tải dịch vụ.
+
+Giao diện hoạt động trực tiếp trên GitHub Pages, không cần backend hay khóa bản đồ trong bản demo. Chưa xác nhận GitHub Pages đã bật và chưa có kiểm thử thực tế trên trình duyệt sản xuất.
+
 ## Có gì trong bản đầu tiên?
 
 - `index.html`: giao diện dark mode responsive, 4 KPI, biểu đồ 10 blockchain, bảng nguồn và timeline có bộ lọc.
