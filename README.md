@@ -12,17 +12,24 @@ Dashboard độc lập theo dõi sự cố các dòng tài sản xuất phát t�
 
 > URL GitHub Pages là đường dẫn dự kiến, chưa xác nhận Pages đã được bật hoặc triển khai thành công.
 
-## Tích hợp WebGIS và đồ thị on-chain
+## WebGIS v2 · Cung động từ giao dịch có chứng cứ
 
-Trang mới: **[webgis.html](./webgis.html)** — URL sau khi bật GitHub Pages: **https://xulytiengviet.github.io/safu/webgis.html**.
+Đường dẫn [webgis.html](./webgis.html) · URL dự kiến sau khi bật Pages: https://xulytiengviet.github.io/safu/webgis.html
 
-- **On-chain network graph**: 10 blockchain từ snapshot hiện hành, liên kết tổng hợp đến `frozen/escrow` và `unresolved`; chọn chain để xem KPI và explorer. Đây là sơ đồ kế toán, **không phải tọa độ hoặc đường đi vật lý của tiền**.
-- **WebGIS thế giới**: MapLibre GL JS và một lớp GeoJSON có khả năng mở rộng, với marker và popup nguồn khi có vị trí địa lý được kiểm chứng. Hiện `data/geo-evidence.geojson` **cố ý không có đối tượng**, do chưa có chứng cứ vị trí thực của ví hay kẻ tấn công; ứng dụng không tạo điểm vị trí giả.
-- **Timeline UTC**: Bộ lọc sự kiện theo ngày; KPI vẫn là snapshot **30/10/2026** chứ không phải dữ liệu lịch sử tại ngày phát lại.
-- **Dữ liệu và quy tắc GIS**: [data/GEO_EVIDENCE.md](./data/GEO_EVIDENCE.md). Bắt buộc nguồn HTTPS, UTC, độ tin cậy, WGS84 lon/lat.
-- **Bản đồ nền**: sử dụng demo tiles của MapLibre cho mục đích thử nghiệm; khi triển khai công khai lớn cần cấu hình nhà cung cấp tiles riêng theo quy định bản quyền và tải dịch vụ.
+Giao diện WebGIS lấy ý tưởng bố cục, neon màu và hiệu ứng cung Bézier / hạt chuyển động / pháo hoa ở điểm đến từ bản mẫu **QuantBot Global Liquidity Map (Fireworks Edition)** do người dùng cung cấp, nhưng **không kế thừa dữ liệu ngẫu nhiên, các quốc gia, giao dịch hoặc chỉ số 'live' giả lập**.
 
-Giao diện hoạt động trực tiếp trên GitHub Pages, không cần backend hay khóa bản đồ trong bản demo. Chưa xác nhận GitHub Pages đã bật và chưa có kiểm thử thực tế trên trình duyệt sản xuất.
+**Hai chế độ tách bạch:**
+
+1. **Sơ đồ giao dịch ví–ví / blockchain**: 21 nút ví/nhãn nguồn và 14 cạnh chuyển khoản có liên kết explorer, trải trên 9 blockchain. Cạnh được lưu trong [data/wallet-flows.json](./data/wallet-flows.json) kèm token, số lượng, UTC, loại nguồn / chuyển tiếp / escrow, mô tả. Click cung hoặc nút để xem ví nguồn, ví nhận và nguồn xác minh. 10 blockchain đều có KPI từ `data/snapshot.json`, kể cả mạng chưa có đường chuyển cụ thể trong tập trích mẫu. Đồ thị **không hoàn chỉnh toàn bộ giao dịch vụ việc**.
+2. **WebGIS địa lý thực**: dùng MapLibre GL JS, lớp dữ liệu [data/geo-evidence.geojson](./data/geo-evidence.geojson) WGS84. Marker chỉ hiện khi có kinh độ/vĩ độ, nguồn HTTPS, thời gian, mức độ tin cậy và diễn giải. Mặc định 0 marker do hiện chưa có tọa độ chứng minh. Địa chỉ ví và quốc gia bị nghi vấn **không phải** bằng chứng địa lý.
+
+**Điều khiển**: bộ lọc 10 chuỗi, tìm kiếm token/hash/địa chỉ, timeline dựa trên 14 giao dịch trích mẫu, phát lại 1×/3×/10×, chọn từng ví/giao dịch, KPI phong tỏa / chưa giải quyết. Tốc độ phát lại chỉ dành cho trực quan và không phải tốc độ giao dịch thực. Giá trị token từng cạnh không cộng xuyên tài sản; ledger tổng dùng phép định giá riêng trong snapshot.
+
+**Tệp triển khai**: `webgis.html`, `assets/safu-webgis.css`, `assets/safu-webgis.js`, `data/wallet-flows.json`, `data/geo-evidence.geojson`, `scripts/validate-webgis.mjs`, `.github/workflows/validate-webgis.yml`.
+
+**Kiểm tra**: `node scripts/validate-webgis.mjs` (Node 22) để xác minh cú pháp, URL nguồn, nút-cạnh, schema GeoJSON và tổng KPI. GitHub Actions dự kiến chạy kiểm tra khi sửa các tệp WebGIS và có thể chạy thủ công. Kiểm tra dữ liệu tĩnh không thay thế kiểm thử trình duyệt với WebGL/đường truyền MapLibre hoặc đối chiếu lại từng biên lai RPC.
+
+**Lưu ý dữ liệu:** Số liệu giao dịch và các nhãn nguồn được trích từ báo cáo và URL công khai mà người dùng cung cấp; repository chỉ cung cấp chứng cứ để người đọc tự đối chiếu, chưa chạy một hệ thống kiểm toán RPC tự động. Không mô phỏng giao dịch không có trong dữ liệu. Nguồn tile MapLibre demo cần thay khi triển khai sản xuất lưu lượng lớn.
 
 ## Có gì trong bản đầu tiên?
 
