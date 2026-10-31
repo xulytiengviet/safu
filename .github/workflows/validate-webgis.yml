@@ -1,0 +1,24 @@
+name: Validate WebGIS evidence
+on:
+  push:
+    paths:
+      - 'webgis.html'
+      - 'assets/safu-webgis.*'
+      - 'data/wallet-flows.json'
+      - 'data/geo-evidence.geojson'
+      - 'data/snapshot.json'
+      - 'scripts/validate-webgis.mjs'
+      - '.github/workflows/validate-webgis.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate syntax, on-chain evidence and GeoJSON schema
+        run: node scripts/validate-webgis.mjs
