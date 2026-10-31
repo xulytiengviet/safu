@@ -1,0 +1,360 @@
+{
+  "schemaVersion": 1,
+  "title": "SAFU documented wallet paths",
+  "asOf": "2026-10-30T17:42:12Z",
+  "disclaimer": "Các cạnh mô tả giao dịch/cụm giao dịch có URL công khai trong nguồn cung cấp, không phải kiểm chứng RPC độc lập. Đây chỉ là trích mẫu, KHÔNG phải toàn bộ dòng tiền, và không cộng giá trị xuyên token.",
+  "nodes": [
+    {
+      "id": "eth-bin14",
+      "label": "Binance14 · ví nguồn",
+      "chain": "Ethereum",
+      "kind": "source",
+      "address": null,
+      "source_url": "https://etherscan.io/tx/0x4395d51dc3f3c51230329efc3548f74edbced353ff3f795c517cc57fa650f89b"
+    },
+    {
+      "id": "eth-a97",
+      "label": "A97 · ví thu gom",
+      "chain": "Ethereum",
+      "kind": "receiver",
+      "address": "0xA97bF7836F8A08F9Ed91D41453D371493FAE8d10",
+      "source_url": "https://etherscan.io/address/0xA97bF7836F8A08F9Ed91D41453D371493FAE8d10"
+    },
+    {
+      "id": "eth-7f",
+      "label": "7f9D · nhánh theo dấu",
+      "chain": "Ethereum",
+      "kind": "receiver",
+      "address": "0x7f9DC988B46336aD536828fAD50fa8fA1E5415E3",
+      "source_url": "https://etherscan.io/address/0x7f9DC988B46336aD536828fAD50fa8fA1E5415E3"
+    },
+    {
+      "id": "eth-c887",
+      "label": "c887 · nhánh nhận",
+      "chain": "Ethereum",
+      "kind": "downstream",
+      "address": "0xc887aF690E0301CD4edBbCe8F8d31b4EC65B286A",
+      "source_url": "https://etherscan.io/address/0xc887aF690E0301CD4edBbCe8F8d31b4EC65B286A"
+    },
+    {
+      "id": "btc-src",
+      "label": "Binance · người gửi BTC",
+      "chain": "Bitcoin",
+      "kind": "source",
+      "address": "bc1qm34lsc65zpw79lxes69zkqmk6ee3ewf0j77s3h",
+      "source_url": "https://whale-alert.io/transaction/bitcoin/82c0b6f2172537bc13bbaa4d34e63dc95c6d056a12e992d6499fa51242df04ce"
+    },
+    {
+      "id": "btc-collect",
+      "label": "bc1q0mtc… · thu gom",
+      "chain": "Bitcoin",
+      "kind": "receiver",
+      "address": "bc1q0mtc2f5agpkvlq6hhahmfr3hlr55kyfjhl2mnm",
+      "source_url": "https://mempool.space/address/bc1q0mtc2f5agpkvlq6hhahmfr3hlr55kyfjhl2mnm"
+    },
+    {
+      "id": "xrp-b6",
+      "label": "Binance (6) · nguồn",
+      "chain": "XRP Ledger",
+      "kind": "source",
+      "address": null,
+      "source_url": "https://xrpscan.com/tx/78E31E7BB06ADABE2322FDD0553533873C1D90664AEDE0C12DE06208F50BFA6A"
+    },
+    {
+      "id": "xrp-b9",
+      "label": "Binance (9) · nguồn",
+      "chain": "XRP Ledger",
+      "kind": "source",
+      "address": null,
+      "source_url": "https://xrpscan.com/tx/6DDF398B6950B34057A7B817E761A1E2A1C59ECAFD594536C54AA6963C5B7E67"
+    },
+    {
+      "id": "xrp-collect",
+      "label": "rK21t6… · nhận",
+      "chain": "XRP Ledger",
+      "kind": "receiver",
+      "address": "rK21t6nGLy4MNDqhvy3pGwcLFy25qgfzMx",
+      "source_url": "https://xrpscan.com/account/rK21t6nGLy4MNDqhvy3pGwcLFy25qgfzMx"
+    },
+    {
+      "id": "sol-b2",
+      "label": "Binance 2 · nguồn",
+      "chain": "Solana",
+      "kind": "source",
+      "address": null,
+      "source_url": "https://solscan.io/tx/5YvwLFWubH1ob8JCNDLbPVioC3jtEZ8Maoz5WhNAs5cc8n9V2BjTWbixt6Ny5mddAKkN2SWJUR9y5kzede3ZTqk2"
+    },
+    {
+      "id": "sol-collect",
+      "label": "AffzFD… · thu gom",
+      "chain": "Solana",
+      "kind": "receiver",
+      "address": "AffzFDKZbyMiU11zmVBoAqD25ugpr7xoWWyRyGigBEaU",
+      "source_url": "https://solscan.io/account/AffzFDKZbyMiU11zmVBoAqD25ugpr7xoWWyRyGigBEaU"
+    },
+    {
+      "id": "ava-b113",
+      "label": "Binance:113 · nguồn",
+      "chain": "Avalanche",
+      "kind": "source",
+      "address": null,
+      "source_url": "https://snowtrace.io/tx/0x167311150173bc17abb6b38ba35ca1e410abc3a21aa42c1f477f567301624287"
+    },
+    {
+      "id": "ava-collect",
+      "label": "5227f6 · thu gom",
+      "chain": "Avalanche",
+      "kind": "receiver",
+      "address": "0x5227f603c1eE34CE3C06eFe6477003BDfCCB2f8c",
+      "source_url": "https://snowtrace.io/address/0x5227f603c1eE34CE3C06eFe6477003BDfCCB2f8c"
+    },
+    {
+      "id": "op-b55",
+      "label": "Binance55 · nguồn",
+      "chain": "Optimism",
+      "kind": "source",
+      "address": null,
+      "source_url": "https://optimistic.etherscan.io/tx/0x10b57fd3899677008e74da0ec097a074c60b67d784ecd7eb1694f8ae6d8533bf"
+    },
+    {
+      "id": "op-collect",
+      "label": "5227f6 · nhận OP",
+      "chain": "Optimism",
+      "kind": "receiver",
+      "address": "0x5227f603c1eE34CE3C06eFe6477003BDfCCB2f8c",
+      "source_url": "https://optimistic.etherscan.io/address/0x5227f603c1ee34ce3c06efe6477003bdfccb2f8c"
+    },
+    {
+      "id": "arb-3e",
+      "label": "3E2b · ví giữ tài sản",
+      "chain": "Arbitrum",
+      "kind": "receiver",
+      "address": "0x3E2bf1ac6bf0934BBba6456C341c2EcbCED632d5",
+      "source_url": "https://arbiscan.io/address/0x3E2bf1ac6bf0934BBba6456C341c2EcbCED632d5"
+    },
+    {
+      "id": "arb-escrow",
+      "label": "0x…0da0 · escrow Hội đồng",
+      "chain": "Arbitrum",
+      "kind": "escrow",
+      "address": "0x0000000000000000000000000000000000000da0",
+      "source_url": "https://arbiscan.io/address/0x0000000000000000000000000000000000000da0"
+    },
+    {
+      "id": "base-b73",
+      "label": "Binance 73 · nguồn",
+      "chain": "Base",
+      "kind": "source",
+      "address": null,
+      "source_url": "https://basescan.org/tx/0xc814cd05ad6eb5ec9a3adbe7486143ede4d62414e6414ded2eb88487e8d0020f"
+    },
+    {
+      "id": "base-collect",
+      "label": "5227f6 · nhận VIRTUAL",
+      "chain": "Base",
+      "kind": "receiver",
+      "address": "0x5227f603c1eE34CE3C06eFe6477003BDfCCB2f8c",
+      "source_url": "https://basescan.org/address/0x5227f603c1eE34CE3C06eFe6477003BDfCCB2f8c"
+    },
+    {
+      "id": "poly-b48",
+      "label": "Binance 48 · nguồn",
+      "chain": "Polygon",
+      "kind": "source",
+      "address": "0xe7804c37c13166ff0b37f5ae0bb07a3aebb6e245",
+      "source_url": "https://polygonscan.com/address/0xe7804c37c13166ff0b37f5ae0bb07a3aebb6e245"
+    },
+    {
+      "id": "poly-collect",
+      "label": "5227f6 · ví nhận",
+      "chain": "Polygon",
+      "kind": "receiver",
+      "address": "0x5227f603c1eE34CE3C06eFe6477003BDfCCB2f8c",
+      "source_url": "https://polygonscan.com/address/0x5227f603C1eE34CE3C06eFe6477003BDfCCB2f8c"
+    }
+  ],
+  "edges": [
+    {
+      "id": "btc-1",
+      "from": "btc-src",
+      "to": "btc-collect",
+      "chain": "Bitcoin",
+      "asset": "BTC",
+      "amount": 7636.8,
+      "utc": "2026-10-29T20:20:06Z",
+      "tx_url": "https://mempool.space/tx/82c0b6f2172537bc13bbaa4d34e63dc95c6d056a12e992d6499fa51242df04ce",
+      "kind": "source",
+      "note": "Một trong 11 giao dịch nguồn Bitcoin, tổng 18.270,2 BTC; không tính cả tổng trên một cạnh.",
+      "evidence_status": "public-source-linked"
+    },
+    {
+      "id": "eth-2239",
+      "from": "eth-bin14",
+      "to": "eth-a97",
+      "chain": "Ethereum",
+      "asset": "ETH",
+      "amount": 128.49113921207507,
+      "utc": "2026-10-29T22:39:35Z",
+      "tx_url": "https://etherscan.io/tx/0x4a4aed833556814c16fe176fc8abc70ce124eadc73da3bcdf42a67ef44f9ad6b",
+      "kind": "source",
+      "note": "Giao dịch còn gồm 122 token; cạnh này chỉ mô tả ETH gốc, không cộng thêm giá trị token.",
+      "evidence_status": "public-source-linked"
+    },
+    {
+      "id": "eth-2356",
+      "from": "eth-bin14",
+      "to": "eth-a97",
+      "chain": "Ethereum",
+      "asset": "ETH",
+      "amount": 2961.910820938285,
+      "utc": "2026-10-29T23:56:47Z",
+      "tx_url": "https://etherscan.io/tx/0x4395d51dc3f3c51230329efc3548f74edbced353ff3f795c517cc57fa650f89b",
+      "kind": "source",
+      "note": "",
+      "evidence_status": "public-source-linked"
+    },
+    {
+      "id": "eth-onward",
+      "from": "eth-7f",
+      "to": "eth-c887",
+      "chain": "Ethereum",
+      "asset": "ETH",
+      "amount": 15292,
+      "utc": "2026-10-30T00:59:00Z",
+      "tx_url": "https://etherscan.io/tx/0x45b3c3b3c536d5ca9d10de1a4d38e1622ea4ffda385358fb7720a13a863ba81b",
+      "kind": "onward",
+      "note": "Chuyển tiền đã được đếm trước đó; không cộng thêm vào outflow nguồn.",
+      "evidence_status": "public-source-linked"
+    },
+    {
+      "id": "xrp-b6",
+      "from": "xrp-b6",
+      "to": "xrp-collect",
+      "chain": "XRP Ledger",
+      "asset": "XRP",
+      "amount": 185017485.5,
+      "utc": "2026-10-29T20:05:00Z",
+      "tx_url": "https://xrpscan.com/tx/78E31E7BB06ADABE2322FDD0553533873C1D90664AEDE0C12DE06208F50BFA6A",
+      "kind": "source",
+      "note": "",
+      "evidence_status": "public-source-linked"
+    },
+    {
+      "id": "xrp-b9",
+      "from": "xrp-b9",
+      "to": "xrp-collect",
+      "chain": "XRP Ledger",
+      "asset": "XRP",
+      "amount": 14693052.5,
+      "utc": "2026-10-29T20:07:00Z",
+      "tx_url": "https://xrpscan.com/tx/6DDF398B6950B34057A7B817E761A1E2A1C59ECAFD594536C54AA6963C5B7E67",
+      "kind": "source",
+      "note": "",
+      "evidence_status": "public-source-linked"
+    },
+    {
+      "id": "sol-first",
+      "from": "sol-b2",
+      "to": "sol-collect",
+      "chain": "Solana",
+      "asset": "SOL",
+      "amount": 965455.1,
+      "utc": "2026-10-29T20:10:18Z",
+      "tx_url": "https://solscan.io/tx/5YvwLFWubH1ob8JCNDLbPVioC3jtEZ8Maoz5WhNAs5cc8n9V2BjTWbixt6Ny5mddAKkN2SWJUR9y5kzede3ZTqk2",
+      "kind": "source",
+      "note": "Một trong năm giao dịch SOL nguồn; 970.521,9 SOL là tổng toàn bộ năm giao dịch.",
+      "evidence_status": "public-source-linked"
+    },
+    {
+      "id": "ava-1",
+      "from": "ava-b113",
+      "to": "ava-collect",
+      "chain": "Avalanche",
+      "asset": "AVAX",
+      "amount": 444536.6,
+      "utc": "2026-10-29T23:04:30Z",
+      "tx_url": "https://snowtrace.io/tx/0x167311150173bc17abb6b38ba35ca1e410abc3a21aa42c1f477f567301624287",
+      "kind": "source",
+      "note": "",
+      "evidence_status": "public-source-linked"
+    },
+    {
+      "id": "op-1",
+      "from": "op-b55",
+      "to": "op-collect",
+      "chain": "Optimism",
+      "asset": "OP",
+      "amount": 44231858.2,
+      "utc": "2026-10-29T20:18:23Z",
+      "tx_url": "https://optimistic.etherscan.io/tx/0x10b57fd3899677008e74da0ec097a074c60b67d784ecd7eb1694f8ae6d8533bf",
+      "kind": "source",
+      "note": "",
+      "evidence_status": "public-source-linked"
+    },
+    {
+      "id": "arb-eth",
+      "from": "arb-3e",
+      "to": "arb-escrow",
+      "chain": "Arbitrum",
+      "asset": "ETH",
+      "amount": 8425.9976799544,
+      "utc": "2026-10-30T00:18:20Z",
+      "tx_url": "https://arbiscan.io/tx/0x410af166c81f9c0f26cc19b4d970c984f526225eeea2aea169179856fd615f70",
+      "kind": "escrow",
+      "note": "Tài sản chuyển vào escrow của Hội đồng; không phải trả lại Binance.",
+      "evidence_status": "public-source-linked"
+    },
+    {
+      "id": "arb-arb",
+      "from": "arb-3e",
+      "to": "arb-escrow",
+      "chain": "Arbitrum",
+      "asset": "ARB",
+      "amount": 74559805.2,
+      "utc": "2026-10-30T00:18:20Z",
+      "tx_url": "https://arbiscan.io/tx/0x75e81a231a86e26a61e22dd2e6521504873a71a7ac1b2143c06e52796ceeedb6",
+      "kind": "escrow",
+      "note": "Tài sản chuyển vào escrow của Hội đồng; không phải trả lại Binance.",
+      "evidence_status": "public-source-linked"
+    },
+    {
+      "id": "base-1",
+      "from": "base-b73",
+      "to": "base-collect",
+      "chain": "Base",
+      "asset": "VIRTUAL",
+      "amount": 4735627.3,
+      "utc": "2026-10-29T20:16:19Z",
+      "tx_url": "https://basescan.org/tx/0xc814cd05ad6eb5ec9a3adbe7486143ede4d62414e6414ded2eb88487e8d0020f",
+      "kind": "source",
+      "note": "",
+      "evidence_status": "public-source-linked"
+    },
+    {
+      "id": "poly-pol",
+      "from": "poly-b48",
+      "to": "poly-collect",
+      "chain": "Polygon",
+      "asset": "POL",
+      "amount": 46626589.6,
+      "utc": "2026-10-29T23:05:55Z",
+      "tx_url": "https://polygonscan.com/tx/0x27f8969e8c3ba27eb5cab9e139805b3618d8f4811d8686d1518e20f6e9ee38c8",
+      "kind": "source",
+      "note": "",
+      "evidence_status": "public-source-linked"
+    },
+    {
+      "id": "poly-usdt",
+      "from": "poly-b48",
+      "to": "poly-collect",
+      "chain": "Polygon",
+      "asset": "USDT0",
+      "amount": 6185900.1,
+      "utc": "2026-10-29T23:05:55Z",
+      "tx_url": "https://polygonscan.com/tx/0x8f5c8b8a834b94396cb18ffad4483c1ae694bcd768f27a27e2bcd0f429e7b25b",
+      "kind": "source",
+      "note": "",
+      "evidence_status": "public-source-linked"
+    }
+  ]
+}
