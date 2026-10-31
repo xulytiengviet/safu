@@ -1,0 +1,181 @@
+{
+  "schemaVersion": 1,
+  "incident": "Binance wallet outflows",
+  "asOf": "2026-10-30T17:42:12Z",
+  "source": "https://fundsarenotsafu.com/",
+  "sourceType": "independent-tracker",
+  "accounting": {
+    "moved": 6291065616.197061,
+    "frozen": 2838445348.476064,
+    "unresolved": 3452620267.720996
+  },
+  "reported": {
+    "binanceImpactApprox": 6300000000,
+    "binanceFrozenApprox": 3000000000,
+    "companyReservesReportedOver": 6340000000
+  },
+  "chains": [
+    {
+      "name": "Ethereum",
+      "gross": 3763067803.835066,
+      "frozen": 2412948367.656124,
+      "unresolved": 1350119436.1789417,
+      "source": "https://etherscan.io/tx/0x53bd38b816c23e74134786c29a8c18d792777998a3b9326047b583100e88e2f3"
+    },
+    {
+      "name": "Bitcoin",
+      "gross": 1440165086.849312,
+      "frozen": 0,
+      "unresolved": 1440165086.849312,
+      "source": "https://mempool.space/tx/82c0b6f2172537bc13bbaa4d34e63dc95c6d056a12e992d6499fa51242df04ce"
+    },
+    {
+      "name": "Tron",
+      "gross": 628096575.331129,
+      "frozen": 378719468,
+      "unresolved": 249377107.33112895,
+      "source": "https://tronscan.org/#/transaction/4203af9ca1833d09c05666eafbd70d703a3811c0bdcf125106685ab75958253e"
+    },
+    {
+      "name": "XRP Ledger",
+      "gross": 291744783.35,
+      "frozen": 0,
+      "unresolved": 291744783.35,
+      "source": "https://xrpscan.com/account/rK21t6nGLy4MNDqhvy3pGwcLFy25qgfzMx"
+    },
+    {
+      "name": "Solana",
+      "gross": 92868725.086889,
+      "frozen": 0,
+      "unresolved": 92868725.086889,
+      "source": "https://solscan.io/tx/5YvwLFWubH1ob8JCNDLbPVioC3jtEZ8Maoz5WhNAs5cc8n9V2BjTWbixt6Ny5mddAKkN2SWJUR9y5kzede3ZTqk2"
+    },
+    {
+      "name": "Avalanche",
+      "gross": 27134020.011,
+      "frozen": 9973741.183352,
+      "unresolved": 17160278.827648,
+      "source": "https://snowtrace.io/tx/0x167311150173bc17abb6b38ba35ca1e410abc3a21aa42c1f477f567301624287"
+    },
+    {
+      "name": "Optimism",
+      "gross": 4490506.7081804,
+      "frozen": 0,
+      "unresolved": 4490506.7081804,
+      "source": "https://optimistic.etherscan.io/tx/0x10b57fd3899677008e74da0ec097a074c60b67d784ecd7eb1694f8ae6d8533bf"
+    },
+    {
+      "name": "Arbitrum",
+      "gross": 30618330.147512,
+      "frozen": 30617871.536588,
+      "unresolved": 458.61092400178313,
+      "source": "https://arbiscan.io/tx/0xa18e57027dae90de066ac093bbb4ae3d63598accbe5175cdf4195c686462edff"
+    },
+    {
+      "name": "Base",
+      "gross": 2703244.413719,
+      "frozen": 0,
+      "unresolved": 2703244.413719,
+      "source": "https://basescan.org/tx/0xc814cd05ad6eb5ec9a3adbe7486143ede4d62414e6414ded2eb88487e8d0020f"
+    },
+    {
+      "name": "Polygon",
+      "gross": 10176540.464254,
+      "frozen": 6185900.1,
+      "unresolved": 3990640.3642539997,
+      "source": "https://polygonscan.com/tx/0x27f8969e8c3ba27eb5cab9e139805b3618d8f4811d8686d1518e20f6e9ee38c8"
+    }
+  ],
+  "events": [
+    {
+      "time": "2026-10-28T07:39:00Z",
+      "title": "Cấp vốn cho địa chỉ gọi từ Tornado Cash (trước sự cố)",
+      "type": "observation",
+      "url": "https://etherscan.io/tx/0xd9e59064d7681439e732a5eb0e2a167b9a23f161d3ce4c8ef111ca824fe59008"
+    },
+    {
+      "time": "2026-10-29T20:05:00Z",
+      "title": "Các giao dịch XRP từ ví được gắn nhãn Binance xuất hiện",
+      "type": "transfer",
+      "url": "https://xrpscan.com/tx/78E31E7BB06ADABE2322FDD0553533873C1D90664AEDE0C12DE06208F50BFA6A"
+    },
+    {
+      "time": "2026-10-29T20:20:06Z",
+      "title": "Khoản chuyển Bitcoin nguồn khoảng 18.270 BTC",
+      "type": "transfer",
+      "url": "https://mempool.space/tx/82c0b6f2172537bc13bbaa4d34e63dc95c6d056a12e992d6499fa51242df04ce"
+    },
+    {
+      "time": "2026-10-29T20:24:00Z",
+      "title": "Quét tài sản lớn từ Binance14 trên Ethereum",
+      "type": "transfer",
+      "url": "https://etherscan.io/tx/0x53bd38b816c23e74134786c29a8c18d792777998a3b9326047b583100e88e2f3"
+    },
+    {
+      "time": "2026-10-29T21:04:00Z",
+      "title": "Tether và Circle phong tỏa một phần token trong ví thu gom",
+      "type": "freeze",
+      "url": "https://etherscan.io/tx/0xc954c86f118e8e410e6a3eb9e3b38ff4a95fbdae9d2d58e13166afb7a1f4fc5f"
+    },
+    {
+      "time": "2026-10-29T22:33:00Z",
+      "title": "Binance thông báo tạm dừng rút tiền",
+      "type": "statement",
+      "url": "https://x.com/binance/status/2115935002139742437"
+    },
+    {
+      "time": "2026-10-29T23:56:47Z",
+      "title": "Lần quét ETH tiếp theo từ Binance14",
+      "type": "transfer",
+      "url": "https://etherscan.io/tx/0x4395d51dc3f3c51230329efc3548f74edbced353ff3f795c517cc57fa650f89b"
+    },
+    {
+      "time": "2026-10-30T00:10:35Z",
+      "title": "Ủy quyền trên Binance14 được xóa",
+      "type": "security",
+      "url": "https://etherscan.io/tx/0xafbf94c92a8d749988411669fa14d4f8866d9b4420b4ebd299f28e958dac7209"
+    },
+    {
+      "time": "2026-10-30T00:18:20Z",
+      "title": "Tài sản Arbitrum chuyển vào escrow của Security Council",
+      "type": "freeze",
+      "url": "https://arbiscan.io/tx/0x410af166c81f9c0f26cc19b4d970c984f526225eeea2aea169179856fd615f70"
+    },
+    {
+      "time": "2026-10-30T02:25:05Z",
+      "title": "Binance công bố ~$6,3B ảnh hưởng và ~$3B phong tỏa",
+      "type": "statement",
+      "url": "https://x.com/binance/status/2115993361517891592"
+    },
+    {
+      "time": "2026-10-30T04:31:49Z",
+      "title": "Chainalysis nêu đánh giá về mối liên hệ DPRK/Bitget; chưa phải kết luận pháp lý",
+      "type": "attribution",
+      "url": "https://x.com/chainalysis/status/2116025255965999217"
+    },
+    {
+      "time": "2026-10-30T08:47:44Z",
+      "title": "Binance cho biết có thêm điểm xâm nhập; rút tiền vẫn tạm dừng",
+      "type": "statement",
+      "url": "https://x.com/binance/status/2116089661408108712"
+    },
+    {
+      "time": "2026-10-30T10:55:15Z",
+      "title": "Binance tuyên bố dành hơn $6,34B quỹ công ty để bù đắp",
+      "type": "statement",
+      "url": "https://x.com/binance/status/2116121748555153621"
+    },
+    {
+      "time": "2026-10-30T17:40:30Z",
+      "title": "Solana: hoàn thành kiểm tra 516 tham chiếu; số SOL nguồn giữ nguyên",
+      "type": "observation",
+      "url": "https://solscan.io/account/AffzFDKZbyMiU11zmVBoAqD25ugpr7xoWWyRyGigBEaU"
+    }
+  ],
+  "disclaimers": [
+    "Số liệu snapshot lịch sử, không phải số dư thời gian thực.",
+    "Không đồng nhất phong tỏa, escrow, dự trữ bồi thường và tiền hoàn trả.",
+    "Dòng chuyển tiếp, swap, bridge không được cộng thêm vào dòng nguồn.",
+    "Đánh giá gán thủ phạm chưa được xác nhận độc lập."
+  ]
+}
