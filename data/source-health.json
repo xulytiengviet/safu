@@ -1,29 +1,29 @@
 {
-  "checkedAtUTC": "2026-11-03T07:54:40.338256+00:00",
+  "checkedAtUTC": "2026-11-04T07:28:49.326960+00:00",
   "checks": {
     "upstream_snapshot": {
       "ok": true,
       "httpStatus": 200,
-      "sha256": "a7780fee2d8ace5a1fe1b94f5028213d28f649f6996cd40e9feb777c60893eb7",
-      "bytes": 905,
+      "sha256": "c685d7906dda3e8e17d807ae9c852e994b29fd0690e7955e642caee12c247117",
+      "bytes": 964,
       "lastModified": null,
-      "etag": "\"7b52156cfe0067394f63b0279add9d94\"",
+      "etag": "\"14009b4e18add62b5721beb3448eccb5\"",
       "note": "Retrieval success does not imply that figures or claims were independently verified"
     },
     "upstream_trace": {
       "ok": true,
       "httpStatus": 200,
-      "sha256": "debbf81e1cc1b15449b2b6de31d511e8af3c44ceb7cfbcd0db88e5de5a05d499",
-      "bytes": 133942,
+      "sha256": "c345b80300e978e5537712b782af7aa8da9c729093064a570fd444b09101e92f",
+      "bytes": 160393,
       "lastModified": null,
-      "etag": "\"053c4246528d699aa8b8b2f59c6e952c\"",
+      "etag": "\"8c79b4a71e343d5c3072335ff73194dd\"",
       "note": "Retrieval success does not imply that figures or claims were independently verified"
     },
     "binance_statement": {
       "ok": true,
       "httpStatus": 200,
-      "sha256": "fdbffa23de3472b6b027954d5a7a33e1aa2c2f91e7a9f30ca454ce4f946902c2",
-      "bytes": 165778,
+      "sha256": "a7f1ae3d3257f67b7ab30be508a44ad16a7a229d7b9875a6294cccd6414b171a",
+      "bytes": 154995,
       "lastModified": null,
       "etag": null,
       "note": "Retrieval success does not imply that figures or claims were independently verified"
