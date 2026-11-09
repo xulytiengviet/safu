@@ -1,5 +1,5 @@
 {
-  "checkedAtUTC": "2026-11-08T07:17:53.344572+00:00",
+  "checkedAtUTC": "2026-11-09T07:55:55.056018+00:00",
   "checks": {
     "upstream_snapshot": {
       "ok": true,
@@ -22,8 +22,8 @@
     "binance_statement": {
       "ok": true,
       "httpStatus": 200,
-      "sha256": "09f0a55226f818f28772b942366ed2cb2a1c9e8641e81303feba7b549ebcc3f4",
-      "bytes": 154810,
+      "sha256": "fb5b4730fba3a7cba52a1fd79baf30bfbb1b9b2e20b96c69ec545f37b7f52aed",
+      "bytes": 155071,
       "lastModified": null,
       "etag": null,
       "note": "Retrieval success does not imply that figures or claims were independently verified"
